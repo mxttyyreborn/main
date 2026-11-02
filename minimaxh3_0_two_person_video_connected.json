@@ -1,8 +1,8 @@
 {
   "id": "767cdd46-104e-4983-9ca3-545026a2e4fe",
   "revision": 0,
-  "last_node_id": 875,
-  "last_link_id": 1627,
+  "last_node_id": 876,
+  "last_link_id": 1630,
   "nodes": [
     {
       "id": 112,
@@ -6809,7 +6809,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            1541
+            1628
           ]
         }
       ],
@@ -6856,7 +6856,7 @@
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
-          "link": 1541
+          "link": 1630
         },
         {
           "name": "video",
@@ -10526,7 +10526,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            1623
+            1623,
+            1629
           ]
         },
         {
@@ -10658,6 +10659,65 @@
         "resize_type": "scale total pixels",
         "resize_type.megapixels": 0.5,
         "scale_method": "lanczos"
+      }
+    },
+    {
+      "id": 876,
+      "type": "ImageConcatMulti",
+      "pos": [
+        -1220,
+        -770
+      ],
+      "size": [
+        270,
+        230
+      ],
+      "flags": {},
+      "order": 190,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE,MASK",
+          "link": 1628
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE,MASK",
+          "link": 1629
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            1630
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "60cd6bc1870db94c6eeb05fbe455147a8e91c4e9",
+        "Node name for S&R": "ImageConcatMulti",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [
+        2,
+        "right",
+        true,
+        null
+      ],
+      "widgets_values_named": {
+        "inputcount": 2,
+        "direction": "right",
+        "match_image_size": true,
+        "Update inputs": null
       }
     }
   ],
@@ -11887,14 +11947,6 @@
       "CLIP"
     ],
     [
-      1541,
-      825,
-      0,
-      826,
-      1,
-      "IMAGE"
-    ],
-    [
       1081,
       529,
       0,
@@ -12188,6 +12240,30 @@
       0,
       400,
       6,
+      "IMAGE"
+    ],
+    [
+      1628,
+      825,
+      0,
+      876,
+      0,
+      "IMAGE"
+    ],
+    [
+      1629,
+      869,
+      0,
+      876,
+      1,
+      "IMAGE"
+    ],
+    [
+      1630,
+      876,
+      0,
+      826,
+      1,
       "IMAGE"
     ]
   ],
